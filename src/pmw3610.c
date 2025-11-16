@@ -812,7 +812,7 @@ static int pmw3610_init(const struct device *dev) {
     // 🆕 起動時にデフォルトレイヤーを適用
     uint8_t default_layer = CONFIG_NAPE_DEFAULT_LAYER;
     LOG_INF("Setting default layer to %d", default_layer);
-    zmk_keymap_layer_activate(default_layer);
+    zmk_keymap_layer_activate(default_layer,true);
 
     // 🔹 ここで last_orientation_layer を初期化
     last_orientation_layer = default_layer;
